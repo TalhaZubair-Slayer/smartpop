@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box
+        {
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            margin: 10px 20px;
+            text-align: center;
+
+        }
+        .nav-container
+        {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="nav-container">
+    <div class="product">product</div>
+    <div>
+    <ul>
+        <li>
+            <a href="#">Windows</a>
+            <a href="#">Coat</a>
+            <a href="#">Shoes</a>
+
+
+        </li>
+    </ul>
+</div>
+
+</div>
+<script>
+    const navContainer = document.querySelector('.nav-container');
+    const product = document.querySelector('.product');
+    const navLinks = document.querySelectorAll('.nav-container ul li a');
+    product.addEventListener('click' , () => {
+     navLinks.style.display = "none";
+
+    })
+
+
+</script>
+
+<div >
+    <div id="box-1" class="box"> Box 1</div>
+   <button id="hideButton">Hide</button>
+   <button id="showButton">Show</button>
+ </div>   
+ <script>
+
+    const hideButton = document.getElementById('hideButton');
+    const showButton = document.getElementById('showButton');
+    const box1 = document.getElementById('box-1');
+    hideButton.addEventListener('click' , () => {
+        box1.style.display = 'none';
+    } );
+    showButton.addEventListener('click' , () => {
+        box1.style.display = '';
+    } );
+
+
+
+
+ </script>
+</body>
+</html>

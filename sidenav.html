@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SideBar</title>
+
+    <style>
+
+        .side_bar
+        {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            left: 0;
+
+        background-color: #111;
+        overflow: hidden;
+        transition: 1s ease-in;
+        
+        }
+        .side_bar .close-btn
+        {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 20px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="side_bar">
+
+        <a href=""class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="">about</a>
+        <a href="">clients</a>
+        <a href="">contact</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+
+<script>
+
+
+    function closeNav()
+    {
+        document.querySelector(".side_bar").style.width = "0";
+    }
+    function openNav()
+    {
+        document.querySelector(".side_bar").style.width = "100%";
+
+    }
+</script>
+
+    
+</body>
+</html>
